@@ -3,7 +3,7 @@
 使用方法：
 
 ```ts
-import PreloadImage from "preload-image";
+import PreloadImage from "preload-image2";
 const preloadImage = new PreloadImage({
   imageUrls: ["foo.png", "bar.jpg"],
   onLoaded() {

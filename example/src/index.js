@@ -1,4 +1,4 @@
-import { PreloadImage } from "preload-image";
+import { PreloadImage } from "preload-image2";
 const preloadImage = new PreloadImage({
   imageUrls: [
     "https://zhaoyuqiqi.github.io/zyq-docs/images/header-logo.jpg",
