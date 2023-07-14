@@ -57,6 +57,7 @@ export class PreloadImage {
   protected async execTasksWithSerial(tasks: (() => Promise<void>)[]) {
     for (const task of tasks) {
       await task();
+      this.options.onProgress?.(++this.count);
     }
   }
   protected loader(url: string) {
