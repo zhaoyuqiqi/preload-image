@@ -1,12 +1,13 @@
 {
   "name": "preload-image2",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Preload your files",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "rollup -c rollup.config.js"
   },
+  "homepage": "https://github.com/zhaoyuqiqi/preload-image",
   "type": "module",
   "keywords": [
     "preload-image",
