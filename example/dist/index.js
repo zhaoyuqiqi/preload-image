@@ -14,6 +14,15 @@ const preloadImage = new o({
   onProgress(count) {
     console.log(`当前加载了${count}`);
   },
+  customLoader(url) {
+    console.log(url);
+    return new Promise((resolve) => {
+      // wx.getImageInfo({
+      //   success: resolve,
+      // });
+      setTimeout(resolve, 500);
+    });
+  },
 });
 
 preloadImage.start();
