@@ -1,4 +1,4 @@
-import { isOriginPath } from "./lib";
+import { isPromise, isOriginPath } from "./lib/index";
 
 interface PreloadImageOptions {
   /** url 数组 */
@@ -34,9 +34,15 @@ export class PreloadImage {
           "资源地址不为网络地址，请使用自定义加载器自定义加载方法"
         );
       }
-      return this.options.customLoader
+      const task = this.options.customLoader
         ? this.options.customLoader(url)
         : this.loader(url);
+      if (!isPromise(task)) {
+        throw new Error(
+          `自定义加载器 customLoader 的返回值必须为 Promise, 但是得到一个${typeof task}`
+        );
+      }
+      return task;
     });
   }
   protected async execTasks(tasks: (() => Promise<void>)[], limit: number) {

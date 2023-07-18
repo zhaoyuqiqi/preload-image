@@ -11,12 +11,12 @@ specifiers:
 dependencies:
   '@rollup/plugin-typescript': 11.1.2_f5d32774b9521e128497afdf4478beef
   rollup: 3.26.2
-  tslib: 2.6.0
   typescript: 5.1.6
 
 devDependencies:
   '@rollup/plugin-node-resolve': 15.1.0_rollup@3.26.2
   '@rollup/plugin-terser': 0.4.3_rollup@3.26.2
+  tslib: 2.6.0
 
 packages:
 
@@ -267,7 +267,7 @@ packages:
 
   /tslib/2.6.0:
     resolution: {integrity: sha512-7At1WUettjcSRHXCyYtTselblcHl9PJFFVKiCAy/bY97+BPZXSQ2wbq0P9s8tK2G7dFQfNnlJnPAiArVBVBsfA==}
-    dev: false
+    dev: true
 
   /typescript/5.1.6:
     resolution: {integrity: sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==}
